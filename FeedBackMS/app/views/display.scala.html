@@ -1,0 +1,15 @@
+@(index: Integer,count: Integer,orders: List[String])
+@import play.api.libs.json._
+
+@main("Welcome to Play 2.0") {
+   <html> 
+      
+       FeedBack:
+       @for(index <- orders){    
+    
+         <ul> 
+	           @index 
+	     </ul> 
+	   }  
+  </html>   
+}

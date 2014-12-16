@@ -1,0 +1,25 @@
+@(message: String)
+
+<html>
+  <body>
+      @message 
+      Feed Back <input type='textarea' name='feedBack' id='feedBack' /><br>
+      <br>
+      <input type="checkbox" name="chkname" value="Anonymous" id='chkname'> Anonymous <br>
+       <br><br>
+      <button onclick="myFunction()">submit</button>
+
+    <script type="text/javascript">
+   
+    function myFunction() {
+	   var name = document.getElementById("chkname").checked;
+	   var feedBack = document.getElementById("feedBack").value;
+	   console.log("The name & feedback is", name, feedBack);
+	   alert(name);
+	   window.location="http://localhost:9000/testCase01?chkname="+name+"&feedBack="+feedBack;
+    }
+     </script> 
+     
+ </body>
+   
+ </html>

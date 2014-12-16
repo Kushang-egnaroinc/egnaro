@@ -1,0 +1,11 @@
+@(message: String)
+<html>
+<body>
+@helper.form(action=routes.Application.index()){
+  @Messages("submit.msg")
+
+  <br><br>
+  <input type='submit' name='mysubmit' value='@Messages("back.msg")' />    
+}
+<body>
+</html>

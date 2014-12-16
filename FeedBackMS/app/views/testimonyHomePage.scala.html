@@ -1,0 +1,9 @@
+@(message: String)
+
+@helper.form(action=routes.Application.updateDB()){      
+	
+  @Messages("name.msg")<input type='textarea' name='name' />
+  @Messages("testimony.msg")<input type='textarea' name='message' />
+ 
+  <input type='submit' name='mysubmit' value='@Messages("button.msg")' />
+}

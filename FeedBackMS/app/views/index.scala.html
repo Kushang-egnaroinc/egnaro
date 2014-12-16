@@ -1,0 +1,39 @@
+@(message: String)
+<html>
+<head>
+</head>
+
+<body>
+
+@main("Welcome to Play 2.0") {
+    
+      @helper.form(action=routes.Application.feedBackControl(),'onsubmit -> "validateForm()"){  
+      
+
+  @Messages("submit.feedback"): <input type='textarea' name='feedBack' /><br>
+   <br>
+   <input type="checkbox" name="name" value="Anonymous"> @Messages("submit.anonymous") <br>
+   <br><br>
+   <input type='submit' onsubmit = 'false' name='feedBackSubmit' id=feedBackSubmit' value=@Messages("submit.enter") />    
+  
+ <script type="text/javascript">
+   
+  function validateForm() 
+    {
+	    alert();
+        if( !isValidEmailAddress( document.getElementById( 'feedBackSubmit' ).value ) ) { 
+            // also before return you can add alert( 'your e-mail is invalid' ); 
+            // or display message in form, etc...
+            return false;
+         } else { 
+            return true;
+            
+         }    
+    }
+     </script> 
+    
+   }   
+}
+
+</body>
+</html>
